@@ -1,0 +1,24 @@
+{
+    "name": "minify-ts-publish",
+    "version": "1.1.1",
+    "main": "dist/index.js",
+    "module": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "tsc && terser dist/index.js --compress --mangle --output dist/index.min.js && javascript-obfuscator dist/index.min.js --output dist/index.js && tsc --declaration --emitDeclarationOnly --outDir dist",
+        "publish": "npm publish"
+    },
+    "devDependencies": {
+        "typescript": "^4.5.2",
+        "terser": "^5.7.1",
+        "javascript-obfuscator": "^4.0.0"
+    },
+    "keywords": [
+      "typescript",
+      "minify",
+      "obfuscate",
+      "npm"
+    ],
+    "author": "Stan",
+    "license": "MIT"
+  }
